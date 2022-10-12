@@ -1,0 +1,40 @@
+<template>
+    <lightning-card>
+   
+    <lightning-combobox
+            name="progress"
+            label="Status"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange} ></lightning-combobox>
+
+    <p>Selected value is: {value}</p>
+
+    <lightning-dual-listbox name="Objects"
+    label="Select"
+    source-label="Available"
+    selected-label="Selected"
+    options={fields}
+    onchange={changeMethod}></lightning-dual-listbox>
+
+<br/>
+<p>{query}</p>
+<br/>
+<p>{stringQuery}</p>
+<lightning-button variant="brand" label="Submit" title="Primary action" onclick={handleClick} class="slds-m-left_x-small">
+
+</lightning-button>
+<br/>
+
+    
+   <lightning-datatable key-field="Id"
+                        data={some}
+                        columns={getData}>
+
+   </lightning-datatable>
+    
+
+
+</lightning-card>
+</template>

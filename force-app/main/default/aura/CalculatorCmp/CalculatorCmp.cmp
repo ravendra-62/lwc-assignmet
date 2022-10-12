@@ -1,0 +1,12 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="sum" type="integer"></aura:attribute>
+    <div class="slds-grid slds-no-flex slds-align_absolute-center">
+    <div class="slds-col slds-size_2-of-12">
+    <lightning:input type="number " aura:id="num1" label="Enter Number 1"/>
+     <lightning:input type="number " aura:id="num2" label="Enter Number 2"/>
+ 
+     <lightning:input type="Submit" value="Add" onclick ="{!c.addFunction }"/> 
+	<p>sum = {!v.sum}</p>
+    </div>
+    </div>
+</aura:component>
